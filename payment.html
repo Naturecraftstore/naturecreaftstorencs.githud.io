@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Payment | Nature Craft Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="payment.css">
+<link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">
+    <a href="home.html">
+      <img src="logo.jpeg" alt="Nature Craft Store Logo">
+    </a>
+    Nature Craft Store
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- ORDER SUMMARY -->
+  <div class="summary">
+    <h2>🛒 Order Summary</h2>
+    <div id="summaryItems"></div>
+    <h3>Total: ₹<span id="totalAmount">0</span></h3>
+  </div>
+
+  <!-- ADDRESS -->
+  <div class="address">
+    <h2>📍 Delivery Address</h2>
+
+    <input type="text" id="name" placeholder="Full Name">
+    <input type="text" id="mobile" placeholder="Mobile Number">
+    <textarea id="address" rows="1" placeholder="House No, Street, Area"></textarea>
+    <textarea id="address" rows="1" placeholder="village"></textarea>
+    <textarea id="address" rows="1" placeholder="Maldal"></textarea>
+
+    <input type="number" id="pincode" placeholder="PIN Code" onkeyup="getAddress()">
+    <input type="text" id="city" placeholder="City" readonly>
+    <input type="text" id="district" placeholder="District" readonly>
+    <input type="text" id="state" placeholder="State" readonly>
+  </div>
+
+  <!-- PAYMENT -->
+  <!-- PAYMENT SECTION -->
+<div class="payment">
+    <h2>Payment Method</h2>
+
+    <label>
+        <input type="radio" name="pay" checked onclick="showCard()"> Card
+    </label>
+    <label>
+        <input type="radio" name="pay" onclick="showUPI()"> UPI
+    </label>
+    <label>
+        <input type="radio" name="pay" onclick="hideAll()"> Cash on Delivery
+    </label>
+
+    <!-- CARD -->
+    <div class="card-box" id="cardBox">
+        <input type="text" placeholder="Card Number" maxlength="16">
+        <input type="text" placeholder="Card Holder Name">
+        <input type="text" placeholder="Expiry MM/YY">
+        <input type="password" placeholder="CVV">
+    </div>
+
+    <!-- UPI -->
+    <div class="card-box" id="upiBox" style="display:none;">
+        <input type="text" placeholder="UPI ID (example@upi)">
+    </div>
+
+    <button onclick="payNow()">Pay Now</button>
+    <p class="secure">🔒 Secure Payment</p>
+  </div>
+
+
+</div>
+
+<div id="chatButton">💬 Chat</div>
+
+<div id="chatPopup">
+    <div class="chat-header">
+        <span>🌿 Nature Craft Store Support</span>
+        <button id="closeChat">✖</button>
+    </div>
+
+    <div class="chat-box" id="chatBox"></div>
+
+    <div class="chat-buttons" id="chatButtons"></div>
+
+    <div class="chat-input">
+        <input type="text" id="userMessage" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <div class="contact-links">
+        <p>📞 <a href="tel:+919876543210">Call: +91 98765 43210</a></p>
+        <p>📧 <a href="mailto:support@naturecraft.com">Email: support@naturecraft.com</a></p>
+        <button onclick="clearChat()" class="clear-chat-btn">Clear Chat</button>
+    </div>
+</div>
+
+<script src="payment.js"></script>
+<script src="contact.js" defer></script>
+<script>function buyNow(name, price, rating, image) {
+
+  const item = [{
+    name: name,
+    price: Number(price), // 🔥 force number
+    rating: rating,
+    image: image,
+    qty: 1
+  }];
+
+  // ✅ KEY PAYMENT PAGE EXPECTS
+  localStorage.setItem("checkoutItems", JSON.stringify(item));
+
+  window.location.href = "payment.html";
+}
+</script>
+</body>
+</html>

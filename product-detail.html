@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details - Nature Craft Store</title>
+  <link rel="stylesheet" href="product-detail.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <nav class="navbar">
+    <div class="logo">
+            <a href="home.html"><img src="logo.jpeg" alt="Nature Craft Store Logo"></a>
+            Nature Craft Store
+        </div>
+
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <!-- <div class="search-container">
+      <input type="text" id="product-search" placeholder="Search for products...">
+    </div> -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="product1.html">Handmade Craft</a></li>
+      <li><a href="product.html">Organic Beauty</a></li>
+      <li><a href="fashion.html">Fashion</a></li>
+      <li><a href="cart.html" class="cart-icon">🛒 Cart<span id="cart-count">0</span></a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="about.html">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+
+<!-- ================= PRODUCT 1 ================= -->
+<div class="product-box" id="AS1">
+  <div class="product-images">
+    <img src="images2/AS1.png" class="main-image" id="main-AS1">
+    <div class="thumbnails">
+      <img src="images2/AS1.png" class="thumb active" onclick="changeImage('AS1', this)">
+      <img src="images2/AS2.png" class="thumb" onclick="changeImage('AS1', this)">
+      <img src="images2/AS3.png" class="thumb" onclick="changeImage('AS1', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Aloe Vera Soap</h2>
+    <p><strong>Price:</strong> ₹199.99</p>
+    <p><strong>Description:</strong> Pure herbal soap made from aloe vera extracts, natural oils, and sandalwood.</p>
+    <p><strong>Ingredients:</strong> Aloe Vera, Sandalwood, Coconut Oil, Glycerin.</p>
+    <p><strong>Benefits:</strong> Moisturizes skin, reduces acne, natural fragrance.</p>
+    <p><strong>Usage:</strong> Apply on wet skin, lather, and rinse thoroughly.</p>
+    <p><strong>Weight:</strong> 100g</p>
+    <p><strong>Suitable For:</strong> All skin types</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.2 / 5</div>
+    <button class="add-cart"onclick="addToCart('Aloe Vera Soap',199.99,'⭐ 4.2 / 5','images2/AS1.png')">Add to Cart</button>
+         <button onclick="buyNow('Aloe Vera Soap',
+          199.99,'⭐ 4.2 / 5',
+          'images2/AS1.png')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+<!-- ================= PRODUCT 2 ================= -->
+<div class="product-box" id="LS1">
+  <div class="product-images">
+    <img src="images2/LS1.png" class="main-image" id="main-LS1">
+    <div class="thumbnails">
+      <img src="images2/LS1.png" class="thumb active" onclick="changeImage('LS1', this)">
+      <img src="images2/LS2.png" class="thumb" onclick="changeImage('LS1', this)">
+      <img src="images2/LS3.png" class="thumb" onclick="changeImage('LS1', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Lavender Bliss Soap</h2>
+    <p><strong>Price:</strong> ₹259</p>
+    <p><strong>Description:</strong> Pure herbal soap made from Lavender extracts and essential oils.</p>
+    <p><strong>Ingredients:</strong> Lavender Extract, Olive Oil, Coconut Oil, Glycerin.</p>
+    <p><strong>Benefits:</strong> Relaxing fragrance, soothes skin, natural moisture.</p>
+    <p><strong>Usage:</strong> Lather and rinse thoroughly on wet skin.</p>
+    <p><strong>Weight:</strong> 120g</p>
+    <p><strong>Suitable For:</strong> All skin types</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ★</div>
+    <div class="rating-value">⭐ 4.5 / 5</div>
+    <button class="add-cart"onclick="addToCart('Lavender Bliss Soap',259,'⭐ 4.5 / 5','images2/LS1.png')">Add to Cart</button>
+
+         <button onclick="buyNow('Lavender Bliss Soap',259,'⭐ 4.5 / 5','images2/LS1.png')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+<!-- ================= PRODUCT 3 ================= -->
+<div class="product-box" id="RS1">
+  <div class="product-images">
+    <img src="images2/RS1.jpeg" class="main-image" id="main-RS1">
+    <div class="thumbnails">
+      <img src="images2/RS1.jpeg" class="thumb active" onclick="changeImage('RS1', this)">
+      <img src="images2/RS2.png" class="thumb" onclick="changeImage('RS1', this)">
+      <img src="images2/RS3.png" class="thumb" onclick="changeImage('RS1', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Rose Bliss Soap</h2>
+    <p><strong>Price:</strong> ₹299</p>
+    <p><strong>Description:</strong> Pure herbal soap made from Rose extracts and oils.</p>
+    <p><strong>Ingredients:</strong> Rose Extract, Almond Oil, Glycerin, Coconut Oil.</p>
+    <p><strong>Benefits:</strong> Softens skin, natural fragrance, moisturizes.</p>
+    <p><strong>Usage:</strong> Lather and rinse thoroughly.</p>
+    <p><strong>Weight:</strong> 100g</p>
+    <p><strong>Suitable For:</strong> All skin types</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.3 / 5</div>
+    <button class="add-cart"onclick="addToCart('Rose Hair Oil',299,'⭐ 4.3 / 5','images2/ro1.jpeg')">Add to Cart</button>
+
+         <button onclick="buyNow('Rose Hair Oil',299,'⭐ 4.3 / 5','images2/ro1.jpeg')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+<!-- ================= PRODUCT 4 ================= -->
+<div class="product-box" id="TS1">
+  <div class="product-images">
+    <img src="images2/TS1.jpeg" class="main-image" id="main-TS1">
+    <div class="thumbnails">
+      <img src="images2/TS1.jpeg" class="thumb active" onclick="changeImage('TS1', this)">
+      <img src="images2/TS2.png" class="thumb" onclick="changeImage('TS1', this)">
+      <img src="images2/TS3.png" class="thumb" onclick="changeImage('TS1', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Turmeric Glow Soap</h2>
+    <p><strong>Price:</strong> ₹349</p>
+    <p><strong>Description:</strong> Pure herbal soap made from Turmeric extracts and natural oils.</p>
+    <p><strong>Ingredients:</strong> Turmeric, Coconut Oil, Olive Oil, Glycerin.</p>
+    <p><strong>Benefits:</strong> Brightens skin, reduces acne, anti-inflammatory.</p>
+    <p><strong>Usage:</strong> Apply on wet skin, lather, rinse.</p>
+    <p><strong>Weight:</strong> 110g</p>
+    <p><strong>Suitable For:</strong> All skin types</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ★</div>
+    <div class="rating-value">⭐ 4.6 / 5</div>
+    <button class="add-cart"
+          onclick="addToCart(
+            'Turmeric Glow Soap',
+            349,'⭐ 4.6 / 5',
+            'images2/TS1.jpeg'
+          )">Add to Cart</button>
+
+         <button onclick="buyNow('Turmeric Glow Soap',
+            349,'⭐ 4.6 / 5',
+            'images2/TS1.jpeg')">
+        Buy Now
+      </button>
+      </div>
+</div>
+
+<!-- ================= PRODUCT 5 ================= -->
+<div class="product-box" id="mc1">
+  <div class="product-images">
+    <img src="images2/mc1.jpeg" class="main-image" id="main-MC1">
+    <div class="thumbnails">
+      <img src="images2/mc1.jpeg" class="thumb active" onclick="changeImage('MC1', this)">
+      <img src="images2/mc2.png" class="thumb" onclick="changeImage('MC1', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Meethi Seeds & Curry Leaves Hair Oil</h2>
+    <p><strong>Price:</strong> ₹249</p>
+    <p><strong>Description:</strong> Hair oil prepared from Meethi seeds and curry leaves.</p>
+    <p><strong>Ingredients:</strong> Meethi Seeds, Curry Leaves, Coconut Oil, Almond Oil.</p>
+    <p><strong>Benefits:</strong> Strengthens hair, reduces hair fall, promotes hair growth.</p>
+    <p><strong>Usage:</strong> Massage onto scalp 2-3 times a week.</p>
+    <p><strong>Volume:</strong> 200ml</p>
+    <p><strong>Suitable For:</strong> Dry and normal hair</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.4 / 5</div>
+    <button class="add-cart"
+          onclick="addToCart(
+            'Nourish & Shine Hair Oil',
+            249,
+            '⭐ 4.4 / 5',
+            'images2/mc1.jpeg'
+          )">Add to Cart</button>
+
+         <button onclick="buyNow('Nourish & Shine Hair Oil',
+            249,'⭐ 4.4 / 5',
+            'images2/mc1.jpeg')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+<!-- ================= PRODUCT 6 ================= -->
+<div class="product-box" id="mr1">
+  <div class="product-images">
+    <img src="images2/mr1.jpeg" class="main-image" id="main-MR1">
+    <div class="thumbnails">
+      <img src="images2/mr1.jpeg" class="thumb active" onclick="changeImage('MR1', this)">
+      <img src="images2/mr2.png" class="thumb" onclick="changeImage('MR1', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Meethi Seeds & Rosemary Hair Oil</h2>
+    <p><strong>Price:</strong> ₹699</p>
+    <p><strong>Description:</strong> Hair oil prepared from Meethi seeds and Rosemary.</p>
+    <p><strong>Ingredients:</strong> Meethi Seeds, Rosemary, Coconut Oil.</p>
+    <p><strong>Benefits:</strong> Strengthens hair, reduces dandruff, promotes growth.</p>
+    <p><strong>Usage:</strong> Massage onto scalp 2-3 times a week.</p>
+    <p><strong>Volume:</strong> 150ml</p>
+    <p><strong>Suitable For:</strong> All hair types</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.1 / 5</div>
+    <button class="add-cart"
+          onclick="addToCart(
+            'Meethi Seeds & Rosemary Hair Oil',
+            699,'⭐ 4.1 / 5',
+            'images2/mr1.jpeg'
+          )">Add to Cart</button>
+
+         <button onclick="buyNow('Meethi Seeds & Rosemary Hair Oil',
+            699,'⭐ 4.1 / 5',
+            'images2/mr1.jpeg')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+<!-- ================= PRODUCT 7 ================= -->
+<div class="product-box" id="ro1">
+  <div class="product-images">
+    <img src="images2/ro1.jpeg" class="main-image" id="main-RO1">
+    <div class="thumbnails">
+      <img src="images2/ro1.jpeg" class="thumb active" onclick="changeImage('RO1', this)">
+      <img src="images2/ro2.png" class="thumb" onclick="changeImage('RO1', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Rose Hair Oil</h2>
+    <p><strong>Price:</strong> ₹429</p>
+    <p><strong>Description:</strong> Hair oil prepared from pure Rose essential oils.</p>
+    <p><strong>Ingredients:</strong> Rose Oil, Almond Oil, Coconut Oil.</p>
+    <p><strong>Benefits:</strong> Strengthens hair, improves shine, reduces hair fall.</p>
+    <p><strong>Usage:</strong> Massage onto scalp 2-3 times a week.</p>
+    <p><strong>Volume:</strong> 200ml</p>
+    <p><strong>Suitable For:</strong> All hair types</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.3 / 5</div>
+    <button class="add-cart"
+            onclick="addToCart(
+              'Rose Hair Oil',
+              429,'⭐ 4.3 / 5',
+              'images2/ro1.jpeg'
+            )">Add to Cart</button>
+
+         <button onclick="buyNow('Rose Hair Oil',
+              429,'⭐ 4.3 / 5',
+              'images2/ro1.jpeg')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+<!-- ================= PRODUCT 8 ================= -->
+<div class="product-box" id="l1">
+  <div class="product-images">
+    <img src="images2/l1.jpeg" class="main-image" id="main-L1">
+    <div class="thumbnails">
+      <img src="images2/l1.jpeg" class="thumb active" onclick="changeImage('L1', this)">
+      <img src="images2/l2.png" class="thumb" onclick="changeImage('L1', this)">
+      <img src="images2/l3.png" class="thumb" onclick="changeImage('L1', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Lemon Brightening Face Pack</h2>
+    <p><strong>Price:</strong> ₹249</p>
+    <p><strong>Description:</strong> Chemical-free face pack made from Kaolin clay and Lemon peel.</p>
+    <p><strong>Ingredients:</strong> Lemon Peel Powder, Kaolin Clay, Aloe Vera.</p>
+    <p><strong>Benefits:</strong> Brightens skin, reduces pigmentation, removes impurities.</p>
+    <p><strong>Usage:</strong> Apply evenly on face, leave 10–15 mins, rinse with water.</p>
+    <p><strong>Weight:</strong> 100g</p>
+    <p><strong>Suitable For:</strong> Normal to oily skin</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.4 / 5</div>
+    <button class="add-cart"
+          onclick="addToCart(
+            'Lemon Brightening Face Pack',
+            249,'⭐ 4.4 / 5',
+            'images2/l1.jpeg'
+          )">Add to Cart</button>
+         <button onclick="buyNow('Lemon Brightening Face Pack',
+            249,'⭐ 4.4 / 5',
+            'images2/l1.jpeg')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+<!-- ================= PRODUCT 9 ================= -->
+<div class="product-box" id="on1">
+  <div class="product-images">
+    <img src="images2/on1.jpeg" class="main-image" id="main-ON1">
+    <div class="thumbnails">
+      <img src="images2/on1.jpeg" class="thumb active" onclick="changeImage('ON1', this)">
+      <img src="images2/on2.png" class="thumb" onclick="changeImage('ON1', this)">
+      <img src="images2/on3.png" class="thumb" onclick="changeImage('ON1', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Orange & Neem Face Pack</h2>
+    <p><strong>Price:</strong> ₹399
+    </p>
+    <p><strong>Description:</strong> Face pack prepared from Orange peel powder and Neem.</p>
+    <p><strong>Ingredients:</strong> Orange Peel, Neem Powder, Multani Mitti.</p>
+    <p><strong>Benefits:</strong> Controls oil, reduces acne, brightens skin.</p>
+    <p><strong>Usage:</strong> Apply on face, leave 10–15 mins, rinse.</p>
+    <p><strong>Weight:</strong> 100g</p>
+    <p><strong>Suitable For:</strong> Oily & combination skin</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.2 / 5</div>
+    <button class="add-cart"
+          onclick="addToCart(
+            'Orange & Neem Face Pack',
+            399,'⭐ 4.2 / 5',
+            'images2/on1.jpeg'
+          )">Add to Cart</button>
+
+         <button onclick="buyNow('Orange & Neem Face Pack',
+            399,'⭐ 4.2 / 5',
+            'images2/on1.jpeg')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+<!-- ================= PRODUCT 10 ================= -->
+<div class="product-box" id="mm1">
+  <div class="product-images">
+    <img src="images2/mm1.jpeg" class="main-image" id="main-MM1">
+    <div class="thumbnails">
+      <img src="images2/mm1.jpeg" class="thumb active" onclick="changeImage('MM1', this)">
+      <img src="images2/mm2.png" class="thumb" onclick="changeImage('MM1', this)">
+      <img src="images2/mm3.png" class="thumb" onclick="changeImage('MM1', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Multani Mitti Face Pack</h2>
+    <p><strong>Price:</strong> ₹399</p>
+    <p><strong>Description:</strong> Chemical-free face pack made from Multani Mitti powder.</p>
+    <p><strong>Ingredients:</strong> Multani Mitti, Aloe Vera Powder, Rose Water.</p>
+    <p><strong>Benefits:</strong> Deep cleansing, oil control, skin brightening.</p>
+    <p><strong>Usage:</strong> Mix with water or rose water, apply on face, rinse after 10 mins.</p>
+    <p><strong>Weight:</strong> 100g</p>
+    <p><strong>Suitable For:</strong> Oily & combination skin</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.1 / 5</div>
+    <button class="add-cart"
+            onclick="addToCart(
+              'Multani Mitti Face Pack',
+              399,'⭐ 4.1 / 5',
+              'images2/mm1.jpeg'
+            )">Add to Cart</button>
+
+         <button onclick="buyNow('Multani Mitti Face Pack',
+              399,'⭐ 4.1 / 5',
+              'images2/mm1.jpeg')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+<!-- ================= PRODUCT 11 ================= -->
+<div class="product-box" id="rp1">
+  <div class="product-images">
+    <img src="images2/rp1.jpeg" class="main-image" id="main-RP1">
+    <div class="thumbnails">
+      <img src="images2/rp1.jpeg" class="thumb active" onclick="changeImage('RP1', this)">
+      <img src="images2/rp2.png" class="thumb" onclick="changeImage('RP1', this)">
+      <img src="images2/rp3.png" class="thumb" onclick="changeImage('RP1', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Rose Powder Face Pack</h2>
+    <p><strong>Price:</strong> ₹349</p>
+    <p><strong>Description:</strong> Natural face pack made from pure Rose powder.</p>
+    <p><strong>Ingredients:</strong> Rose Powder, Multani Mitti, Aloe Vera.</p>
+    <p><strong>Benefits:</strong> Moisturizes, soothes, brightens skin.</p>
+    <p><strong>Usage:</strong> Apply on face, rinse after 10–15 mins.</p>
+    <p><strong>Weight:</strong> 100g</p>
+    <p><strong>Suitable For:</strong> All skin types</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ★</div>
+    <div class="rating-value">⭐ 4.5 / 5</div>
+    <button class="add-cart"
+        onclick="addToCart(
+          'Rose Powder Face Pack',
+          349,'⭐ 4.5 / 5',
+          'images2/rp1.jpeg'
+        )">Add to Cart</button>
+
+         <button onclick="buyNow('Rose Powder Face Pack',
+          349,'⭐ 4.5 / 5',
+          'images2/rp1.jpeg')">
+        Buy Now
+      </button>
+
+  </div>
+</div>
+
+<!-- ================= PRODUCT 12 ================= -->
+<div class="product-box" id="HS1">
+  <div class="product-images">
+    <img src="images2/HS1.png" class="main-image" id="main-HS1">
+    <div class="thumbnails">
+      <img src="images2/HS1.png" class="thumb active" onclick="changeImage('HS1', this)">
+      <img src="images2/HS2.png" class="thumb" onclick="changeImage('HS1', this)">
+      <img src="images2/HS3.png" class="thumb" onclick="changeImage('HS1', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Hibiscus Shampoo</h2>
+    <p><strong>Price:</strong> ₹399</p>
+    <p><strong>Description:</strong> Hibiscus shampoo that promotes hair growth and reduces hair fall.</p>
+    <p><strong>Ingredients:</strong> Hibiscus Extract, Aloe Vera, Coconut Oil.</p>
+    <p><strong>Benefits:</strong> Strengthens hair, adds shine, reduces breakage.</p>
+    <p><strong>Usage:</strong> Apply on wet hair, massage, rinse.</p>
+    <p><strong>Volume:</strong> 200ml</p>
+    <p><strong>Suitable For:</strong> All hair types</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.4 / 5</div>
+    <button class="add-cart"onclick="addToCart('Hibiscus Shampoo',399,'⭐ 4.4 / 5','images2/HS1.png')">Add to Cart</button>
+         <button onclick="buyNow('Hibiscus Shampoo',399,'⭐ 4.4 / 5','images2/HS1.png')">
+        Buy Now
+      </button>
+
+  </div>
+</div>
+<!-- ================= PRODUCT 13 ================= -->
+<div class="product-box" id="NS1">
+  <div class="product-images">
+    <img src="images2/NS1.png" class="main-image" id="main-NS1">
+    <div class="thumbnails">
+      <img src="images2/NS1.png" class="thumb active" onclick="changeImage('NS1', this)">
+      <img src="images2/NS2.png" class="thumb" onclick="changeImage('NS1', this)">
+      <img src="images2/NS3.png" class="thumb" onclick="changeImage('NS1', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Neem Shampoo</h2>
+    <p><strong>Price:</strong> ₹200</p>
+    <p><strong>Description:</strong> Neem shampoo that promotes hair growth and reduces dandruff.</p>
+    <p><strong>Ingredients:</strong> Neem Extract, Aloe Vera, Coconut Oil.</p>
+    <p><strong>Benefits:</strong> Reduces dandruff, strengthens hair, natural shine.</p>
+    <p><strong>Usage:</strong> Massage on wet hair, rinse thoroughly.</p>
+    <p><strong>Volume:</strong> 200ml</p>
+    <p><strong>Suitable For:</strong> All hair types</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.3 / 5</div>
+    <button class="add-cart"
+          onclick="addToCart(
+            'Neem Shampoo',
+            199,'⭐ 4.3 / 5',
+            'images2/NS1.png'
+          )">Add to Cart</button>
+
+         <button onclick="buyNow('Neem Shampoo',
+            199,'⭐ 4.3 / 5',
+            'images2/NS1.png')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+<!-- ================= PRODUCT 14 ================= -->
+<div class="product-box" id="OS1">
+  <div class="product-images">
+    <img src="images2/OS1.jpeg" class="main-image" id="main-OS1">
+    <div class="thumbnails">
+      <img src="images2/OS1.jpeg" class="thumb active" onclick="changeImage('OS1', this)">
+      <img src="images2/OS2.png" class="thumb" onclick="changeImage('OS1', this)">
+      <img src="images2/OS3.png" class="thumb" onclick="changeImage('OS1', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Onion Shampoo</h2>
+    <p><strong>Price:</strong> ₹250</p>
+    <p><strong>Description:</strong> Onion shampoo that promotes hair growth and reduces hair fall.</p>
+    <p><strong>Ingredients:</strong> Onion Extract, Aloe Vera, Coconut Oil.</p>
+    <p><strong>Benefits:</strong> Reduces hair fall, strengthens roots, adds shine.</p>
+    <p><strong>Usage:</strong> Apply on wet hair, massage, rinse.</p>
+    <p><strong>Volume:</strong> 200ml</p>
+    <p><strong>Suitable For:</strong> All hair types</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.2 / 5</div>
+    <button class="add-cart"
+          onclick="addToCart(
+            'Onion Shampoo',
+            349,'⭐ 4.2 / 5',
+            'images2/OS1.jpeg'
+          )">Add to Cart</button>
+
+         <button onclick="buyNow('Onion Shampoo',
+            349,'⭐ 4.2 / 5',
+            'images2/OS1.jpeg')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+<!-- ================= PRODUCT 15 ================= -->
+<div class="product-box" id="AS11">
+  <div class="product-images">
+    <img src="images2/AS11.jpeg" class="main-image" id="main-AS11">
+    <div class="thumbnails">
+      <img src="images2/AS11.jpeg" class="thumb active" onclick="changeImage('AS11', this)">
+      <img src="images2/AS12.png" class="thumb" onclick="changeImage('AS11', this)">
+      <img src="images2/AS13.png" class="thumb" onclick="changeImage('AS11', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Aloe Vera Shampoo</h2>
+    <p><strong>Price:</strong> ₹320</p>
+    <p><strong>Description:</strong> Aloe vera shampoo that promotes hair growth and reduces hair fall.</p>
+    <p><strong>Ingredients:</strong> Aloe Vera Extract, Coconut Oil, Olive Oil.</p>
+    <p><strong>Benefits:</strong> Strengthens hair, reduces dandruff, promotes shine.</p>
+    <p><strong>Usage:</strong> Apply on wet hair, massage, rinse thoroughly.</p>
+    <p><strong>Volume:</strong> 200ml</p>
+    <p><strong>Suitable For:</strong> All hair types</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ★</div>
+    <div class="rating-value">⭐ 4.6 / 5</div>
+    <button class="add-cart"
+          onclick="addToCart(
+            'Aloe Vera Shampoo',
+            320,'⭐ 4.6 / 5',
+            'images2/AS11.jpeg'
+          )">Add to Cart</button>
+         <button onclick="buyNow('Aloe Vera Shampoo',
+            320,'⭐ 4.6 / 5',
+            'images2/AS11.jpeg')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+</div>
+<!-- ================= FLOATING CHAT ================= -->
+<div id="chatButton">💬 Chat</div>
+
+<div id="chatPopup">
+    <div class="chat-header">
+         <a href="home.html"><img src="logo.jpeg" alt="Nature Craft Store Logo"></a> Nature Craft Store 
+        <button id="closeChat">✖</button>
+    </div>
+
+    <div class="chat-box" id="chatBox"></div>
+
+    <div class="chat-buttons" id="chatButtons"></div>
+
+    <div class="chat-input">
+        <input type="text" id="userMessage" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <div class="contact-links">
+        <p>📞 <a href="tel:+919876543210">Call: +91 98765 43210</a></p>
+        <p>📧 <a href="mailto:support@naturecraft.com">Email: support@naturecraft.com</a></p>
+        <button onclick="clearChat()" class="clear-chat-btn">Clear Chat</button>
+    </div>
+</div>
+
+<script src="product-detail.js"></script>
+<script src="contact.js" defer></script>
+</body>
+</html>

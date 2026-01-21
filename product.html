@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nature Craft Store - Products</title>
+  <link rel="stylesheet" href="product.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+            <a href="home.html"><img src="logo.jpeg" alt="Nature Craft Store Logo"></a>
+            Nature Craft Store
+        </div>
+
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="search-container">
+      <input type="text" id="product-search" placeholder="Search for products..." onkeyup="searchProducts()">
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="product1.html">Handmade Craft</a></li>
+      <li><a href="product.html">Organic Beauty</a></li>
+      <li><a href="Fashion.html">Fashion</a></li>
+      <li><a href="cart.html" class="cart-icon">🛒 Cart<span id="cart-count">0</span></a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="about.html">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="product-grid">
+
+    <!-- Product 1 -->
+    <div class="product-card">
+      <a href="product-detail.html#AS1">
+        <img src="images/AS1.png" alt="Aloe Vera Soap">
+      </a>
+      <h3 class="product-title">Aloe Vera Soap</h3>
+      <p class="product-price">₹199.99</p>
+      <div class="product-buttons">
+        <button class="add-cart"onclick="addToCart('Aloe Vera Soap',199.99,'⭐ 4.2 / 5','images2/AS1.png')">Add to Cart</button>
+         <button onclick="buyNow('Aloe Vera Soap',
+          199.99,'⭐ 4.2 / 5',
+          'images2/AS1.png')">
+        Buy Now
+      </button>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <a href="product-detail.html#AS11">
+        <img src="images2/AS11.jpeg" alt="Aloe Vera Shampoo">
+      </a>
+      <h3 class="product-title">Aloe Vera Shampoo</h3>
+      <p class="product-price">₹320</p>
+      <div class="product-buttons">
+        <button class="add-cart"
+          onclick="addToCart(
+            'Aloe Vera Shampoo',
+            320,'⭐ 4.6 / 5',
+            'images2/AS11.jpeg'
+          )">Add to Cart</button>
+         <button onclick="buyNow('Aloe Vera Shampoo',
+            320,'⭐ 4.6 / 5',
+            'images2/AS11.jpeg')">
+        Buy Now
+      </button>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <a href="product-detail.html#HS1">
+        <img src="images2/HS1.png" alt="Hibiscus Shampoo">
+      </a>
+      <h3 class="product-title">Hibiscus Shampoo</h3>
+      <p class="product-price">₹399</p>
+      <div class="product-buttons">
+        <button class="add-cart"onclick="addToCart('Hibiscus Shampoo',399,'⭐ 4.4 / 5','images2/HS1.png')">Add to Cart</button>
+         <button onclick="buyNow('Hibiscus Shampoo',399,'⭐ 4.4 / 5','images2/HS1.png')">
+        Buy Now
+      </button>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <a href="product-detail.html#LS1">
+        <img src="images2/LS1.png" alt="Lavender Bliss Soap">
+      </a>
+      <h3 class="product-title">Lavender Bliss Soap</h3>
+      <p class="product-price">₹259</p>
+      <div class="product-buttons">
+        <button class="add-cart"onclick="addToCart('Lavender Bliss Soap',259,'⭐ 4.5 / 5','images2/LS1.png')">Add to Cart</button>
+
+         <button onclick="buyNow('Lavender Bliss Soap',259,'⭐ 4.5 / 5','images2/LS1.png')">
+        Buy Now
+      </button>
+      </div>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="product-card">
+      <a href="product-detail.html#mc1">
+        <img src="images2/mc1.jpeg" alt="Nourish & Shine Hair Oil">
+      </a>
+      <h3 class="product-title">Nourish & Shine Hair Oil</h3>
+      <p class="product-price">₹249</p>
+      <div class="product-buttons">
+        <button class="add-cart"
+          onclick="addToCart(
+            'Nourish & Shine Hair Oil',
+            249,
+            '⭐ 4.4 / 5',
+            'images2/mc1.jpeg'
+          )">Add to Cart</button>
+
+         <button onclick="buyNow('Nourish & Shine Hair Oil',
+            249,'⭐ 4.4 / 5',
+            'images2/mc1.jpeg')">
+        Buy Now
+      </button>
+      </div>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product-card">
+      <a href="product-detail.html#RS1">
+        <img src="images2/RS1.jpeg" alt="Rose Bliss sope">
+      </a>
+      <h3 class="product-title">Rose Bliss sope</h3>
+      <p class="product-price">₹299</p>
+      <div class="product-buttons">
+        <button class="add-cart"onclick="addToCart('Rose Hair Oil',299,'⭐ 4.3 / 5','images2/ro1.jpeg')">Add to Cart</button>
+
+         <button onclick="buyNow('Rose Hair Oil',299,'⭐ 4.3 / 5','images2/ro1.jpeg')">
+        Buy Now
+      </button>
+      </div>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="product-card">
+      <a href="product-detail.html#TS1">
+        <img src="images2/TS1.jpeg" alt="Turmeric Glow Soap">
+      </a>
+      <h3 class="product-title">Turmeric Glow Soap</h3>
+      <p class="product-price">₹349</p>
+      <div class="product-buttons">
+        <button class="add-cart"
+          onclick="addToCart(
+            'Turmeric Glow Soap',
+            349,'⭐ 4.6 / 5',
+            'images2/TS1.jpeg'
+          )">Add to Cart</button>
+
+         <button onclick="buyNow('Turmeric Glow Soap',
+            349,'⭐ 4.6 / 5',
+            'images2/TS1.jpeg')">
+        Buy Now
+      </button>
+      </div>
+    </div>
+
+    <!-- Product 8 -->
+    <div class="product-card">
+      <a href="product-detail.html#mr1">
+        <img src="images2/mr1.jpeg" alt="Meethi Seeds & Rosemary Hair Oil">
+      </a>
+      <h3 class="product-title">Meethi Seeds & Rosemary Hair Oil</h3>
+      <p class="product-price">₹699</p>
+      <div class="product-buttons">
+        <button class="add-cart"
+          onclick="addToCart(
+            'Meethi Seeds & Rosemary Hair Oil',
+            699,'⭐ 4.1 / 5',
+            'images2/mr1.jpeg'
+          )">Add to Cart</button>
+
+         <button onclick="buyNow('Meethi Seeds & Rosemary Hair Oil',
+            699,'⭐ 4.1 / 5',
+            'images2/mr1.jpeg')">
+        Buy Now
+      </button>
+      </div>
+    </div>
+
+    <!-- Product 9 -->
+    <div class="product-card">
+      <a href="product-detail.html#l1">
+        <img src="images2/l1.jpeg" alt="Lemon Brightening Face Pack">
+      </a>
+      <h3 class="product-title">Lemon Brightening Face Pack</h3>
+      <p class="product-price">₹249</p>
+      <div class="product-buttons">
+        <button class="add-cart"
+          onclick="addToCart(
+            'Lemon Brightening Face Pack',
+            249,'⭐ 4.4 / 5',
+            'images2/l1.jpeg'
+          )">Add to Cart</button>
+         <button onclick="buyNow('Lemon Brightening Face Pack',
+            249,'⭐ 4.4 / 5',
+            'images2/l1.jpeg')">
+        Buy Now
+      </button>
+      </div>
+    </div>
+
+    <!-- Product 10 -->
+    <div class="product-card">
+      <a href="product-detail.html#on1">
+        <img src="images2/on1.jpeg" alt="Orange & Neem Face Pack">
+      </a>
+      <h3 class="product-title">Orange & Neem Face Pack</h3>
+      <p class="product-price">₹399</p>
+      <div class="product-buttons">
+        <button class="add-cart"
+          onclick="addToCart(
+            'Orange & Neem Face Pack',
+            399,'⭐ 4.2 / 5',
+            'images2/on1.jpeg'
+          )">Add to Cart</button>
+
+         <button onclick="buyNow('Orange & Neem Face Pack',
+            399,'⭐ 4.2 / 5',
+            'images2/on1.jpeg')">
+        Buy Now
+      </button>
+      </div>
+    </div>
+
+    <!-- Product 11 -->
+    <div class="product-card">
+      <a href="product-detail.html#OS1">
+        <img src="images2/OS1.jpeg" alt="Onion Shampoo">
+      </a>
+      <h3 class="product-title">Onion Shampoo</h3>
+      <p class="product-price">₹349</p>
+      <div class="product-buttons">
+        <button class="add-cart"
+          onclick="addToCart(
+            'Onion Shampoo',
+            349,'⭐ 4.2 / 5',
+            'images2/OS1.jpeg'
+          )">Add to Cart</button>
+
+         <button onclick="buyNow('Onion Shampoo',
+            349,'⭐ 4.2 / 5',
+            'images2/OS1.jpeg')">
+        Buy Now
+      </button>
+      </div>
+    </div>
+
+    <!-- Product 12 -->
+    <div class="product-card">
+      <a href="product-detail.html#ro1">
+        <img src="images2/ro1.jpeg" alt="Rose Hair Oil">
+      </a>
+      <h3 class="product-title">Rose Hair Oil</h3>
+      <p class="product-price">₹429</p>
+      <div class="product-buttons">
+        <button class="add-cart"
+            onclick="addToCart(
+              'Rose Hair Oil',
+              429,'⭐ 4.3 / 5',
+              'images2/ro1.jpeg'
+            )">Add to Cart</button>
+
+         <button onclick="buyNow('Rose Hair Oil',
+              429,'⭐ 4.3 / 5',
+              'images2/ro1.jpeg')">
+        Buy Now
+      </button>
+      </div>
+    </div>
+
+    <!-- Product 13 -->
+    <div class="product-card">
+      <a href="product-detail.html#mm1">
+        <img src="images2/mm1.jpeg" alt="Multani Mitti Face pack">
+      </a>
+      <h3 class="product-title">Multani Mitti Face pack</h3>
+      <p class="product-price">₹399</p>
+      <div class="product-buttons">
+        <button class="add-cart"
+            onclick="addToCart(
+              'Multani Mitti Face Pack',
+              399,'⭐ 4.1 / 5',
+              'images2/mm1.jpeg'
+            )">Add to Cart</button>
+
+         <button onclick="buyNow('Multani Mitti Face Pack',
+              399,'⭐ 4.1 / 5',
+              'images2/mm1.jpeg')">
+        Buy Now
+      </button>
+      </div>
+    </div>
+
+    <!-- Product 14 -->
+    <div class="product-card">
+      <a href="product-detail.html#rp1">
+        <img src="images2/rp1.jpeg" alt="Rose Powder Face pack">
+      </a>
+      <h3 class="product-title">Rose Powder Face pack</h3>
+      <p class="product-price">₹349</p>
+      <div class="product-buttons">
+        <button class="add-cart"
+        onclick="addToCart(
+          'Rose Powder Face Pack',
+          349,'⭐ 4.5 / 5',
+          'images2/rp1.jpeg'
+        )">Add to Cart</button>
+
+         <button onclick="buyNow('Rose Powder Face Pack',
+          349,'⭐ 4.5 / 5',
+          'images2/rp1.jpeg')">
+        Buy Now
+      </button>
+      </div>
+    </div>
+
+    <!-- Product 15 -->
+    <div class="product-card">
+      <a href="product-detail.html#NS1">
+        <img src="images2/NS1.png" alt="Neem Shampoo">
+      </a>
+      <h3 class="product-title">Neem Shampoo</h3>
+      <p class="product-price">₹199</p>
+      <div class="product-buttons">
+        <button class="add-cart"
+          onclick="addToCart(
+            'Neem Shampoo',
+            199,'⭐ 4.3 / 5',
+            'images2/NS1.png'
+          )">Add to Cart</button>
+
+         <button onclick="buyNow('Neem Shampoo',
+            199,'⭐ 4.3 / 5',
+            'images2/NS1.png')">
+        Buy Now
+      </button>
+      </div>
+    </div>
+
+  </div>
+</main>
+<!-- chatButton -->
+<div id="chatButton">💬 Chat</div>
+
+<div id="chatPopup">
+    <div class="chat-header">
+         <a href="home.html"><img src="logo.jpeg" alt="Nature Craft Store Logo"></a> Nature Craft Store 
+        <button id="closeChat">✖</button>
+    </div>
+
+    <div class="chat-box" id="chatBox"></div>
+
+    <div class="chat-buttons" id="chatButtons"></div>
+
+    <div class="chat-input">
+        <input type="text" id="userMessage" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <div class="contact-links">
+        <p>📞 <a href="tel:+919876543210">Call: +91 98765 43210</a></p>
+        <p>📧 <a href="mailto:support@naturecraft.com">Email: support@naturecraft.com</a></p>
+        <button onclick="clearChat()" class="clear-chat-btn">Clear Chat</button>
+    </div>
+</div>
+<script src="product.js"></script>
+<script src="contact.js" defer></script>
+</body>
+</html>

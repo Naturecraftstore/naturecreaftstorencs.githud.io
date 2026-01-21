@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nature Craft Store</title>
+  <link rel="stylesheet" href="product.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="home.html"><img src="logo.jpeg" alt="Nature Craft Store Logo"></a>
+            Nature Craft Store
+        </div>
+
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+        <div class="search-container">
+            <input type="text" id="product-search" placeholder="Search for products...">
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="product1.html">Handmade Craft</a></li>
+            <li><a href="product.html">Organic Beauty</a></li>
+            <li><a href="Fashion.html">Fashion</a></li>
+           <li><a href="cart.html" class="cart-icon">🛒 Cart<span id="cart-count">0</span></a></li>
+           <li><a href="order.html">Order</a></li>
+            <li><a href="about.html">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+  <main>
+    <div class="product-grid">
+
+      <!-- Product 1 -->
+      <div class="product-card">
+  <a href="product-detail1.html#bag1">
+    <img src="images1/bag1.png">
+  </a>
+
+  <h3 class="product-title">Handmade Bag</h3>
+  <p class="product-description">Beautiful Handmade Bag.</p>
+  <p class="product-price">₹210</p>
+
+  <div class="product-buttons">
+    <button class="add-cart"
+      onclick="addToCart('Handmade Bag', 210, '⭐ 4.2 / 5', 'images1/bag1.png')">
+      Add to Cart
+    </button>
+
+    <button
+      onclick="buyNow('Handmade Bag', 210, '⭐ 4.2 / 5', 'images1/bag1.png')">
+      Buy Now
+    </button>
+  </div>
+</div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <a href="product-detail1.html#bag 4">
+          <img src="images1/bag4.jpg" >
+        </a>
+        <h3 class="product-title"> Cotton Handmade Bag</h3>
+        <p class="product-description">Premium handcrafted multicolour Bag.</p>
+        <p class="product-price">₹359.9</p>
+        <div class="product-buttons">
+          <button class="add-cart"onclick="addToCart('Cotton Handmade Bag',359.9,'⭐ 4.6 / 5','images1/bag4.jpg')">Add to Cart</button>
+          <button onclick="buyNow('Cotton Handmade Bag',359.9,'⭐ 4.6 / 5','images1/bag4.jpg')">
+        Buy Now
+      </button>
+
+        </div>
+      </div>
+      <!-- Product 3 -->
+      <div class="product-card">
+        <a href="product-detail1.html#purse3">
+          <img src="images1/purse3.webp" >
+        </a>
+        <h3 class="product-title">Purse</h3>
+        <p class="product-description">Hand-poured purse.</p>
+        <p class="product-price">₹299</p>
+        <div class="product-buttons">
+          <button class="add-cart"onclick="addToCart('Purse',299,'⭐ 4.5 / 5','images1/purse3.webp')">Add to Cart</button>
+          <button onclick="buyNow('Purse',299,'⭐ 4.5 / 5','images1/purse3.webp')">
+        Buy Now
+      </button>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <a href="product-detail1.html#sling bag6">
+          <img src="images1/sling bag6.webp" >
+        </a>
+        <h3 class="product-title">Sling Bagp</h3>
+        <p class="product-description">Traditional sling Bag.</p>
+        <p class="product-price">₹249</p>
+        <div class="product-buttons">
+          <button class="add-cart"
+          onclick="addToCart(
+            'Sling Bagp',
+            249,'⭐ 4.6 / 5',
+            'images1/sling bag6.webp'
+          )">Add to Cart</button>
+          <button onclick="buyNow('Sling Bagp',
+            249,'⭐ 4.6 / 5',
+            'images1/sling bag6.webp')">
+        Buy Now
+      </button>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card">
+        <a href="product-detail1.html#purse8">
+          <img src="images1/purse8.jpg" >
+        </a>
+        <h3 class="product-title">Multicolour Purse</h3>
+        <p class="product-description">Eco-friendly jute purse</p>
+        <p class="product-price">₹349</p>
+        <div class="product-buttons">
+          <button class="add-cart"
+          onclick="addToCart(
+            'Multicolour Purse',
+            349,'⭐ 4.4 / 5',
+            'images1/purse8.jpg'
+          )">Add to Cart</button>
+          <button onclick="buyNow('Multicolour Purse',
+            349,'⭐ 4.4 / 5',
+            'images1/purse8.jpg')">
+        Buy Now
+      </button>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card">
+        <a href="product-detail1.html#earnings5">
+          <img src="images1/earnings5.jpg" >
+        </a>
+        <h3 class="product-title">Handmade Earning</h3>
+        <p class="product-description">Beautiful multicolour Thread Earning.</p>
+        <p class="product-price">₹230</p>
+        <div class="product-buttons">
+          <button class="add-cart"
+          onclick="addToCart(
+            'Handmade Earning',
+            230,'⭐ 4.4 / 5',
+            'images1/earnings5.jpg'
+          )">Add to Cart</button>
+          <button onclick="buyNow('Handmade Earning',
+            230,'⭐ 4.4 / 5',
+            'images1/earnings5.jpg')">
+        Buy Now
+      </button>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="product-card">
+        <a href="product-detail1.html#slingbag">
+          <img src="images1/slingbag 7.jpg" >
+        </a>
+        <h3 class="product-title">Sling Bag</h3>
+        <p class="product-description"></p>Eco-Friendly Sling Bag.</p>
+        <p class="product-price">₹467</p>
+        <div class="product-buttons">
+          <button class="add-cart"
+          onclick="addToCart(
+            'Sling Bagp',
+            467,'⭐ 4.4 / 5',
+            'images1/slingbag 7.jpg'
+          )">Add to Cart</button>
+          <button onclick="buyNow('Sling Bagp',
+            467,'⭐ 4.4 / 5',
+            'images1/slingbag 7.jpg')">
+        Buy Now
+      </button>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="product-card">
+        <a href="product-detail1.html#earning7">
+          <img src="images1/earning7.jpg" >
+        </a>
+        <h3 class="product-title">Jumka</h3>
+        <p class="product-description">Multicolour Thread Jumka</p>
+        <p class="product-price">₹798.99</p>
+        <div class="product-buttons">
+          <button class="add-cart"
+          onclick="addToCart(
+            'Jumka',
+            798.9,'⭐ 4.4 / 5',
+            'images1/earning7.jpg'
+          )">Add to Cart</button>
+          <button onclick="buyNow('Jumka',
+            798.9,'⭐ 4.4 / 5',
+            'images1/earning7.jpg')">
+        Buy Now
+      </button>
+        </div>
+      </div>
+
+      <!-- Product 9 -->
+      <div class="product-card">
+        <a href="product-detail1.html#bangle5">
+          <img src="images1/bangle5.jpg" alt="Lip Gloss">
+        </a>
+        <h3 class="product-title">Handmade coat Bangles</h3>
+        <p class="product-description">Decorative artistic vase Bangles.</p>
+        <p class="product-price">₹249</p>
+        <div class="product-buttons">
+          <button class="add-cart"
+          onclick="addToCart(
+            'Handmade Bangles',
+            249,'⭐ 4.6 / 5',
+            'images1/bangle5.jpg'
+          )">Add to Cart</button>
+          <button onclick="buyNow('Handmade Bangles',
+            249,'⭐ 4.6 / 5',
+            'images1/bangle5.jpg')">
+        Buy Now
+      </button>
+        </div>
+      </div>
+
+      <!-- Product 10 -->
+      <div class="product-card">
+        <a href="product-detail1.html#bangle6">
+          <img src="images1/bangle6.jpg" >
+        </a>     
+        <h3 class="product-title">Bangle</h3>        
+        <p class="product-description">Bright colors for beautiful nails.</p>
+.</p>
+        <p class="product-price">₹478</p>
+        <div class="product-buttons">
+          <button class="add-cart"
+          onclick="addToCart(
+            'Bangle',
+            478,'⭐ 4.3 / 5',
+            'images1/bangle6.jpg'
+          )">Add to Cart</button>
+          <button onclick="buyNow('Bangle',
+            478,'⭐ 4.3 / 5',
+            'images1/bangle6.jpg')">
+        Buy Now
+      </button>
+        </div>
+      </div>
+
+       <!-- Product 11 -->
+      <div class="product-card">
+        <a href="product-detail1.html#bangle7">
+          <img src="images1/bangle7.jpg" >
+        </a>
+        <h3 class="product-title">Thread Bangle</h3>
+        <p class="product-description">Super look Thread Bangle.</p>
+        <p class="product-price">₹216.99</p>
+        <div class="product-buttons">
+          <button class="add-cart"
+          onclick="addToCart(
+            'Thread Bangle',
+            216.99,'⭐ 4.8 / 5',
+            'images1/bangle7.jpg'
+          )">Add to Cart</button>
+          <button onclick="buyNow('Thread Bangle',
+            216.99,'⭐ 4.8 / 5',
+            'images1/bangle7.jpg')">
+        Buy Now
+      </button>
+        </div>
+      </div>
+
+     <!-- <--- Product 12 -->
+       <div class="product-card">
+        <a href="product-detail1.html#pattren1b">
+          <img src="images1/pattren1b.jpg" >
+        </a>
+        <h3 class="product-title">Handmade Thread Saree</h3>
+        <p class="product-description">A beautifully handcrafted saree woven with care and tradition.</p>
+        <p class="product-price">₹1199.99</p>
+        <div class="product-buttons">
+          <button class="add-cart"
+          onclick="addToCart(
+            'Handmade Saree',
+            1199.99,'⭐ 4.6 / 5',
+            'images1/pattren1b.jpg'
+          )">Add to Cart</button>
+          <button onclick="buyNow( 'Handmade Saree',
+            1199.99,'⭐ 4.6 / 5',
+            'images1/pattren1b.jpg')">
+        Buy Now
+      </button>
+        </div>
+      </div> 
+
+      <!-- Product 13--->
+      <div class="product-card">
+        <a href="product-detail1.html#pat6a">
+          <img src="images1/pat6a.jpg">
+        </a>
+        <h3 class="product-title">Handmade Smooth Saree</h3>
+        <p class="product-description">Handmade saree with delicate detailing and timeless charm.</p>
+        <p class="product-price">₹699.9</p>
+        <div class="product-buttons">
+          <button class="add-cart"
+          onclick="addToCart(
+            'Handmade Smooth Saree',
+            699.9,'⭐ 4.1 / 5',
+            'images1/pat6a.jpg'
+          )">Add to Cart</button>
+          <button onclick="buyNow('Handmade Smooth Saree',
+            699.9,'⭐ 4.1 / 5',
+            'images1/pat6a.jpg')">
+        Buy Now
+      </button>
+        </div>
+      </div> 
+
+      <!-- Product 14 -->
+      <div class="product-card">
+        <a href="product-detail1.html#pat 3a">
+          <img src="images1/pat 3a.jpg" >
+        </a>
+        <h3 class="product-title">Cotton Saree</h3>
+        <p class="product-description">A unique handmade saree that blends tradition with simplicity.</p>
+        <p class="product-price">₹2110</p>
+        <div class="product-buttons">
+          <button class="add-cart"
+          onclick="addToCart(
+            'Cotton Saree',
+            2110,'⭐ 4.2 / 5',
+            'images1/pat 3a.jpg'
+          )">Add to Cart</button>
+          <button onclick="buyNow('Cotton Saree',
+            2110,'⭐ 4.2 / 5',
+            'images1/pat 3a.jpg')">
+        Buy Now
+      </button>
+        </div>
+      </div>
+
+      <!-- Product 15 -->
+      <div class="product-card">
+        <a href="product-detail1.html#par5a">
+          <img src="images1/pat5a.jpg" >
+        </a>
+        <h3 class="product-title">Handcrafted Modren Saree</h3>
+        <p class="product-description">Crafted by skilled artisans, this saree brings elegance in every thread.</p>
+        <p class="product-price">₹2299</p>
+        <div class="product-buttons">
+          <button class="add-cart"
+          onclick="addToCart(
+            'Handcrafted Modren Saree',
+            2299,'⭐ 4.7 / 5',
+            'images1/pat5a.jpg'
+          )">Add to Cart</button>
+          <button onclick="buyNow('Handcrafted Modren Saree',
+            2299,'⭐ 4.7 / 5',
+            'images1/pat5a.jpg')">
+        Buy Now
+      </button>
+        </div>
+      </div> 
+      <!-- <----product 16....> -->
+        <div class="product-card">
+        <a href="product-detail1.html#sling bag3">
+          <img src="images1/sling bag3.jpg" >
+        </a>
+        <h3 class="product-title">Beats Sling Bag</h3>
+        <p class="product-description">This adorable sling bag ensuring a secure and hands-free experience.</p>
+        <p class="product-price">₹349</p>
+        <div class="product-buttons">
+          <button class="add-cart"
+          onclick="addToCart(
+            'Beats Sling Bag',
+            349.9,'⭐ 4.6 / 5',
+            'images1/sling bag3.jpg'
+          )">Add to Cart</button>
+          <button onclick="buyNow('Beats Sling Bag',
+            349.9,'⭐ 4.6 / 5',
+            'images1/sling bag3.jpg.')">
+        Buy Now
+      </button>
+        </div>
+      </div> 
+      
+    </div>
+  </main>
+  <!-- chatButton -->
+<div id="chatButton">💬 Chat</div>
+
+<div id="chatPopup">
+    <div class="chat-header">
+         <a href="home.html"><img src="logo.jpeg" alt="Nature Craft Store Logo"></a> Nature Craft Store 
+        <button id="closeChat">✖</button>
+    </div>
+
+    <div class="chat-box" id="chatBox"></div>
+
+    <div class="chat-buttons" id="chatButtons"></div>
+
+    <div class="chat-input">
+        <input type="text" id="userMessage" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <div class="contact-links">
+        <p>📞 <a href="tel:+919876543210">Call: +91 98765 43210</a></p>
+        <p>📧 <a href="mailto:support@naturecraft.com">Email: support@naturecraft.com</a></p>
+        <button onclick="clearChat()" class="clear-chat-btn">Clear Chat</button>
+    </div>
+</div>
+<script src="contact.js" defer></script>
+  <script src="product.js"></script>
+</body>
+</html>

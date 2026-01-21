@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details - Nature Craft Store</title>
+  <link rel="stylesheet" href="product-detail.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <nav class="navbar">
+    <div class="logo">
+            <a href="home.html"><img src="logo.jpeg" alt="Nature Craft Store Logo"></a>
+            Nature Craft Store
+        </div>
+
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <!-- <div class="search-container">
+      <input type="text" id="product-search" placeholder="Search for products...">
+    </div> -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="product1.html">Handmade Craft</a></li>
+      <li><a href="product.html">Organic Beauty</a></li>
+      <li><a href="fashion.html">Fashion</a></li>
+      <li><a href="cart.html" class="cart-icon">🛒 Cart<span id="cart-count">0</span></a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="about.html">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+    <!-- ================= PRODUCT 16 ================= -->
+<div class="product-box" id="bag1">
+  <div class="product-images">
+    <img src="images1/bag1.png" class="main-image" id="bag1">
+    <div class="thumbnails">
+      <img src="images1/bag1.png" class="thumb active" onclick="changeImage('bag1', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Handmade Bag</h2>
+    <p><strong>Price:</strong> ₹499.00</p>
+    <p><strong>Description:</strong> Handmade Embroidered Fabric Bags
+Designed for everyday use,The combination of bold colors, textured fabric, and detailed stitching adds a timeless, artisanal charm that elevates any outfit.
+Perfect for casual outings, travel, shopping, or as a statement accessory, these handmade bags celebrate creativity, heritage, and individuality.</p>
+    <p><strong>Benefits:</strong> <br>
+
+      *100% handmade <br>
+      *Detailed traditional embroidery <br>
+      *Durable, high-quality fabric <br>
+      *Lightweight and comfortable to carry</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.2 / 5</div>
+    <button class="add-cart"onclick="addToCart('Handmade Bag',210,'⭐ 4.2 / 5','images1/bag1.png')">Add to Cart</button>
+          <button onclick="buyNow('Handmade Bag',210,'⭐ 4.2 / 5','images1/bag1.png')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+  <!-- PRODUCT 17 -->
+  <div class="product-box" id="bag 4">
+  <div class="product-images">
+    <img src="images1/bag4.jpg" class="main-image" id="bag 4">
+    <div class="thumbnails">
+      <img src="images1/bag4.jpg" class="thumb active" onclick="changeImage('bag 4', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Cotton Handmade Bag</h2>
+    <p><strong>Price:</strong> ₹349.99</p>
+    <p><strong>Description:</strong> This adorable handbag features a charming cat face design that kids will instantly love. Crafted with soft, textured fabric and cheerful pastel colors, the bag is decorated with playful details that give it a fun and friendly look.
+    <p><strong>Benefits:</strong> *Cute cat-themed design <br>
+      *Soft, kid-friendly fabric <br>
+      *Lightweight and easy to carry <br>
+      *Comfortable top handles</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.6 / 5</div>
+    <button class="add-cart"onclick="addToCart('Cotton Handmade Bag',359.9,'⭐ 4.6 / 5','images1/bag4.jpg')">Add to Cart</button>
+          <button onclick="buyNow('Cotton Handmade Bag',359.9,'⭐ 4.6 / 5','images1/bag4.jpg')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+
+<!-- PRODUCT 18
+  <div class="product-box" id="boho">
+  <div class="product-images">
+    <img src="images1/boho.jpg" class="main-image" id="main-AS1">
+    <div class="thumbnails">
+      <img src="images1/boho.jpg" class="thumb active" onclick="changeImage('AS1', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Woven Bag</h2>
+    <p><strong>Price:</strong> ₹449.99</p>
+    <p><strong>Description:</strong> A vibrant cluster of multicolored tassels and pom-poms attached near the handle, adding a playful, handcrafted accent.and Casual, boho, and summery—ideal for beach outings, markets, vacations, or everyday warm-weather use.
+    <p><strong>Benefits:</strong> *Made from handwoven natural straw or palm fiber <br>
+      *Thick rope handles, <br>
+      *Comfortable for carrying by hand or over the arm<br>
+      *Comfortable top handles</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.5 / 5</div>
+    <button class="add-cart"
+        onclick="addToCart(
+          'Woven Bag',
+          449.,
+          'images1/boho.jpg'
+        )">Add to Cart</button>
+
+    <button onclick="buyNow('Woven Bag',
+          449.,
+          'images1/boho.jpg')">
+        Buy Now
+      </button>
+  </div>
+</div> -->
+
+
+  <!-- PRODUCT 19 -->
+  <div class="product-box" id="purse3">
+  <div class="product-images">
+    <img src="images1/purse3.webp" class="main-image" id="main-purse3">
+    <div class="thumbnails">
+      <img src="images1/purse3.webp" class="thumb active" onclick="changeImage('purse3', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Jute Purse</h2>
+    <p><strong>Price:</strong> ₹299</p>
+    <p><strong>Description:</strong> Decorated with colorful granny-square motifs on each side, featuring floral-inspired patterns.Playful, bohemian, and vintage-inspired—perfect for casual outings, festivals, or adding a pop of color to everyday outfits.
+    <p><strong>Benefits:</strong> *Unique & Handmade <br>
+      *Durable Craftsmanship <br>
+      *Eye-Catching Design<br>
+      *Versatile Styling</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.5 / 5</div>
+    <button class="add-cart"onclick="addToCart('Purse',299,'⭐ 4.5 / 5','images1/purse3.png')">Add to Cart</button>
+          <button onclick="buyNow('Purse',299,'⭐ 4.5 / 5','images1/purse3.png')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+  <!-- PRODUCT 20 -->
+  <div class="product-box" id="purse8">
+  <div class="product-images">
+    <img src="images1/purse8.jpg" class="main-image" id="main-purse8">
+    <div class="thumbnails">
+      <img src="images1/purse8.jpg" class="thumb active" onclick="changeImage('purse8', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Multicolour Purse</h2>
+    <p><strong>Price:</strong> ₹349</p>
+    <p><strong>Description:</strong> Decorated with colorful Rich multicolor patchwork panels across the body in yellow, blue, red, green,Intricate hand embroidery with geometric and floral motifs on the flap.
+    <p><strong>Benefits:</strong> *Embedded small mirror work accents<br>
+      *Made from textile fabric<br>
+      *Soft inner lining to protect contents.<br>
+      *Bold, traditional aesthetic</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.4 / 5</div>
+    <button class="add-cart"
+          onclick="addToCart(
+            'Multicolour Purse',
+            349,'⭐ 4.4 / 5',
+            'images1/purse8.jpg'
+          )">Add to Cart</button>
+          <button onclick="buyNow('Multicolour Purse',
+            349,'⭐ 4.4 / 5',
+            'images1/purse8.jpg')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+
+  <!-- PRODUCT 22 -->
+  <div class="product-box" id="earning7">
+  <div class="product-images">
+    <img src="images1/earning7.jpg" class="main-image" id="main-earning7">
+    <div class="thumbnails">
+      <img src="images1/earning7.jpg" class="thumb active" onclick="changeImage('earning7', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Thread Jumka</h2>
+    <p><strong>Price:</strong> ₹798.99</p>
+    <p><strong>Description:</strong> This is a thread jhumka (jumka) earring with a colorful, handcrafted look,Perfect for ethnic wear, festivals, weddings, parties, and traditional functions.
+    <p><strong>Benefits:</strong> *Lightweight and comfortable<br>
+      *Perfect for ethnic wear<br>
+      *Available in bright or pastel shades,<br>
+      *Covered with silk or cotton thread</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.4 / 5</div>
+    <button class="add-cart"
+          onclick="addToCart(
+            'Jumka',
+            798.9,'⭐ 4.4 / 5',
+            'images1/earning7.jpg'
+          )">Add to Cart</button>
+          <button onclick="buyNow('Jumka',
+            798.9,'⭐ 4.4 / 5',
+            'images1/earning7.jpg')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+   <!-- PRODUCT 23-->
+  <div class="product-box" id="earnings5">
+  <div class="product-images">
+    <img src="images1/earnings5.jpg" class="main-image" id="main-earning5">
+    <div class="thumbnails">
+      <img src="images1/earnings5.jpg" class="thumb active" onclick="changeImage('earnings5', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Handmade Earning</h2>
+    <p><strong>Price:</strong> ₹230</p>
+    <p><strong>Description:</strong> These handcrafted earrings are thoughtfully made using traditional techniques, showcasing fine craftsmanship and artistic detail. Designed with lightweight materials, they offer comfortable wear while making a stylish statement.
+    <p><strong>Benefits:</strong> *Perfect for both ethnic and fusion outfits<br>
+      *Earrings add a touch of elegance<br>
+      *Looks as well as festive and special occasions<br>
+      *Complements sarees, lehengas, kurtis</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.4 / 5</div>
+   <button class="add-cart"
+          onclick="addToCart(
+            'Handmade Earning',
+            230,'⭐ 4.4 / 5',
+            'images1/earnings5.jpg'
+          )">Add to Cart</button>
+          <button onclick="buyNow('Handmade Earning',
+            230,'⭐ 4.4 / 5',
+            'images1/earnings5.jpg')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+  <!-- PRODUCT 24 -->
+  <div class="product-box" id="bangle5">
+  <div class="product-images">
+    <img src="images1/bangle5.jpg" class="main-image" id="main-bangle5">
+    <div class="thumbnails">
+      <img src="images1/bangle5.jpg" class="thumb active" onclick="changeImage('bangle5', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Handmade Bangle</h2>
+    <p><strong>Price:</strong> ₹249</p>
+    <p><strong>Description:</strong> These handcrafted bangles are beautifully made using traditional techniques, reflecting fine artistry and attention to detail. Each bangle features intricate handwork, vibrant colors, and unique patterns that highlight its artisanal charm.
+    <p><strong>Benefits:</strong> *Perfect for both ethnic and fusion outfits<br>
+      *Bangle add a touch of elegance<br>
+      *Looks as well as festive and special occasions<br>
+      *Complements sarees, lehengas, kurtis</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.6 / 5</div>
+    <button class="add-cart"
+          onclick="addToCart(
+            'Handmade Bangles',
+            249,'⭐ 4.6 / 5',
+            'images1/bangle5.jpg'
+          )">Add to Cart</button>
+          <button onclick="buyNow('Handmade Bangles',
+            249,'⭐ 4.6 / 5',
+            'images1/bangle5.jpg')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+  <!-- PRODUCT 26 -->
+  <div class="product-box" id="bangle6">
+  <div class="product-images">
+    <img src="images1/bangle6.jpg" class="main-image" id="main-bangle6">
+    <div class="thumbnails">
+      <img src="images1/bangle6.jpg" class="thumb active" onclick="changeImage('bangle6', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Bangle.</h2>
+    <p><strong>Price:</strong> ₹478</p>
+    <p><strong>Description:</strong> These handcrafted bangles are comfortable for all-day wear and designed to complement both ethnic and fusion outfits. Perfect for festivals, weddings, casual gatherings, or gifting, these handmade bangles add a touch of elegance, culture, and individuality to any look.
+    <p><strong>Benefits:</strong> *showcasing detailed handwork<br>
+      *Made using quality materials<br>
+      *It offers a comfortable fit<br>
+      *Complements sarees, lehengas, kurtis</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <button class="add-cart"
+          onclick="addToCart(
+            'Bangle',
+            478,'⭐ 4.3 / 5',
+            'images1/bangle6.jpg'
+          )">Add to Cart</button>
+          <button onclick="buyNow('Bangle',
+            478,'⭐ 4.3 / 5',
+            'images1/bangle6.jpg')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+  <!-- PRODUCT 27 -->
+  <div class="product-box" id="bangle7">
+  <div class="product-images">
+    <img src="images1/bangle7.jpg" class="main-image" id="main-bangle7">
+    <div class="thumbnails">
+      <img src="images1/bangle7.jpg" class="thumb active" onclick="changeImage('bangle7', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Thread Bangle</h2>
+    <p><strong>Price:</strong> ₹216.9</p>
+    <p><strong>Description:</strong> This thread bangle is beautifully handcrafted using fine silk or cotton threads wrapped neatly around a sturdy base. The smooth threadwork creates a vibrant, elegant finish, often enhanced with subtle embellishments such as beads, stones, or metallic accents.
+    <p><strong>Benefits:</strong> *Super look Thread Bangle.<br>
+      *Made using quality materials<br>
+      *Lightweight and comfortable to wear<br>
+      *Colorful and traditional touch to any look.</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.8 / 5</div>
+    <button class="add-cart"
+          onclick="addToCart(
+            'Thread Bangle',
+            216.99,'⭐ 4.8 / 5',
+            'images1/bangle7.jpg'
+          )">Add to Cart</button>
+          <button onclick="buyNow('Thread Bangle',
+            216.99,'⭐ 4.8 / 5',
+            'images1/bangle7.jpg')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+  <!-- PRODUCT 28 -->
+  <div class="product-box" id="pattren1b">
+  <div class="product-images">
+    <img src="images1/pattren1b.jpg" class="main-image" id="main-pattren1b">
+    <div class="thumbnails">
+      <img src="images1/pattren1b.jpg" class="thumb active" onclick="changeImage('pattren1b', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Handmade Thread Saree</h2>
+    <p><strong>Price:</strong> ₹1199.9</p>
+    <p><strong>Description:</strong> A beautifully handcrafted saree woven with care and tradition.This handmade saree is a beautiful expression of traditional craftsmanship and timeless elegance. Carefully woven and finished by skilled artisans, it reflects rich cultural heritage and meticulous attention to detail. Crafted using high-quality natural or blended fabrics, the saree offers a soft texture, graceful drape, and comfortable wear throughout the day.
+    <p><strong>Benefits:</strong> *Super look Thread Saree.<br>
+      *Easy to wear<br>
+      *Lightweight and super smooth finish<br>
+      *Traditional touch to any look.</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.6 / 5</div>
+    <button class="add-cart"
+          onclick="addToCart(
+            'Handmade Saree',
+            1199.99,'⭐ 4.6 / 5',
+            'images1/pattren1b.jpg'
+          )">Add to Cart</button>
+          <button onclick="buyNow( 'Handmade Saree',
+            1199.99,'⭐ 4.6 / 5',
+            'images1/pattren1b.jpg')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+  <!-- PRODUCT 29 -->
+  <div class="product-box" id="pat6a">
+  <div class="product-images">
+    <img src="images1/pat6a.jpg" class="main-image" id="main-pat6a">
+    <div class="thumbnails">
+      <img src="images1/pat6c.jpg" class="thumb active" id="main-pat6b">
+      <img src="images1/pat6e.jpg" class="thumb active" onclick="changeImage('pat6a', this)">
+      <img src="images1/pat6a.jpg" class="thumb active" onclick="changeImage('pat6a', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Handmade Smooth Saree</h2>
+    <p><strong>Price:</strong> ₹699.9</p>
+    <p><strong>Description:</strong> Handmade saree with delicate detailing and timeless charm.Perfect for cultural celebrations, or formal occasions, this handmade saree pairs beautifully with both traditional and contemporary blouses.
+    <p><strong>Benefits:</strong> *Graceful Draping.<br>
+      *Classic Design<br>
+      *Versatile Wear<br>
+      *Perfect for Gifting</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.1 / 5</div>
+    <button class="add-cart"
+          onclick="addToCart(
+            'Handmade Smooth Saree',
+            699.9,'⭐ 4.1 / 5',
+            'images1/pat6a.jpg'
+          )">Add to Cart</button>
+          <button onclick="buyNow('Handmade Smooth Saree',
+            699.9,'⭐ 4.1 / 5',
+            'images1/pat6a.jpg')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+  <!-- PRODUCT 30 -->
+  <div class="product-box" id="pat 3a">
+  <div class="product-images">
+    <img src="images1/pat 3a.jpg" class="main-image" id="main-pat 3a">
+    <div class="thumbnails">
+      <img src="images1/pat 3b.jpg" class="thumb active" id="main-pat 3a">
+      <img src="images1/pat 3c.jpg" class="thumb active" onclick="changeImage('pat 3a', this)">
+      <img src="images1/pat 3a.jpg" class="thumb active" onclick="changeImage('pat 3a', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Cotton Saree</h2>
+    <p><strong>Price:</strong> ₹2110</p>
+    <p><strong>Description:</strong> This cotton saree is thoughtfully crafted from high-quality natural cotton, offering a perfect blend of comfort, simplicity, and its elegance. The soft, breathable fabric drapes gracefully and feels gentle on the skin, making it ideal for everyday wear.
+    <p><strong>Benefits:</strong> *All-Day Comfort<br>
+      *Skin-Friendly<br>
+      *Easy Maintenance<br>
+      *Eco-Friendly Choice</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.2 / 5</div>
+    <button class="add-cart"
+          onclick="addToCart(
+            'Cotton Saree',
+            2110,'⭐ 4.2 / 5',
+            'images1/pat 3a.jpg'
+          )">Add to Cart</button>
+          <button onclick="buyNow('Cotton Saree',
+            2110,'⭐ 4.2 / 5',
+            'images1/pat 3a.jpg')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+<!-- PRODUCT 31 -->
+  <div class="product-box" id="par5a">
+  <div class="product-images">
+    <img src="images1/pat5a.jpg" class="main-image" id="main-par5a">
+    <div class="thumbnails">
+      <img src="images1/pat5c.jpg" class="thumb active" id="main-pat5c">
+      <img src="images1/pat5d.jpg" class="thumb active" onclick="changeImage('par5a', this)">
+      <img src="images1/pat5a.jpg" class="thumb active" onclick="changeImage('par5a', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Handcrafted Modren Saree</h2>
+    <p><strong>Price:</strong> ₹2299</p>
+    <p><strong>Description:</strong> his is an elegant silk saree in a rich royal blue and teal tone, beautifully enhanced with gold zari work. The saree features delicate woven motifs across the body and a contrasting gold-bordered pallu that adds grandeur and sophistication. The smooth, lustrous fabric drapes gracefully, highlighting a refined and timeless silhouette. Paired with a matching blouse and traditional jewelry, it reflects classic Indian elegance with a contemporary touch.
+    <p><strong>Benefits:</strong> *Luxurious Look<br>
+      *Graceful Draping<br>
+      *Value for Money<br>
+      *Highly Recommended</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.7 / 5</div>
+    <button class="add-cart"
+          onclick="addToCart(
+            'Handcrafted Modren Saree',
+            2299,'⭐ 4.7 / 5',
+            'images1/pat5a.jpg'
+          )">Add to Cart</button>
+          <button onclick="buyNow('Handcrafted Modren Saree',
+            2299,'⭐ 4.7 / 5',
+            'images1/pat5a.jpg')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+<!-- PRODUCT 32 -->
+  <div class="product-box" id="sling bag6">
+  <div class="product-images">
+    <img src="images1/sling bag6.webp" class="main-image" id="main-sling bag6">
+    <div class="thumbnails">
+      <img src="images1/sling bag6.webp" class="thumb active" onclick="changeImage('sling bag6', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Traditional sling Bag</h2>
+    <p><strong>Price:</strong> ₹349.99</p>
+    <p><strong>Description:</strong> This sling bag is designed for convenience and modern style, making it a perfect everyday accessory. Crafted from durable, high-quality materials, it features a compact yet spacious design that comfortably holds daily essentials such as a phone, wallet, keys, and small personal items.
+    <p><strong>Benefits:</strong> *Hands-Free Comfort <br>
+      *Soft, kid-friendly fabric <br>
+      *Durable Construction <br>
+      *Great Gifting Option</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.6 / 5</div>
+    <button class="add-cart"
+          onclick="addToCart(
+            'Sling Bagp',
+            249,'⭐ 4.6 / 5',
+            'images1/sling bag6.webp'
+          )">Add to Cart</button>
+          <button onclick="buyNow('Sling Bagp',
+            249,'⭐ 4.6 / 5',
+            'images1/sling bag6.webp')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+<!-- PRODUCT 17 -->
+  <div class="product-box" id="sling bag3">
+  <div class="product-images">
+    <img src="images1/sling bag3.jpg" class="main-image" id="main-sling bag3">
+    <div class="thumbnails">
+      <img src="images1/sling bag3.jpg" class="thumb active" onclick="changeImage('sling bag3', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Beats Sling Bag</h2>
+    <p><strong>Price:</strong> ₹349.99</p>
+    <p><strong>Description:</strong> This adorable sling bag ensuring a secure and hands-free experience. With a sleek silhouette and thoughtfully designed compartments, this sling bag blends practicality with effortless style.
+    <p><strong>Benefits:</strong> *Adjustable Strap <br>
+      *Travel-Friendly <br>
+      *Versatile Style<br>
+      *Comfortable top handles</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.6 / 5</div>
+    <button class="add-cart"
+          onclick="addToCart(
+            'Beats Sling Bag',
+            349.9,'⭐ 4.6 / 5',
+            'images1/sling bag3.jpg'
+          )">Add to Cart</button>
+          <button onclick="buyNow('Beats Sling Bag',
+            349.9,'⭐ 4.6 / 5',
+            'images1/sling bag3.jpg.')">
+        Buy Now
+      </button>
+  </div>
+</div>
+
+<!-- PRODUCT 33 -->
+  <div class="product-box" id="slingbag">
+  <div class="product-images">
+    <img src="images1/slingbag 7.jpg" class="main-image" id="slingbag">
+    <div class="thumbnails">
+      <img src="images1/slingbag 7.jpg" class="thumb active" onclick="changeImage('slingbag', this)">
+    </div>
+  </div>
+  <div class="details">
+    <h2>Sling Bag</h2>
+    <p><strong>Price:</strong> ₹467</p>
+    <p><strong>Description:</strong> This handmade sling bag is carefully crafted by skilled artisans, showcasing fine handwork and unique detailing. Made using quality, durable materials, it offers a perfect balance of style and functionality.
+    <p><strong>Benefits:</strong> *Making it ideal for daily use <br>
+      *Soft, kid-friendly fabric <br>
+      *Lightweight and easy to carry <br>
+      *Comfortable top handles</p>
+  </div>
+  <div class="actions">
+    <div class="rating">★ ★ ★ ★ ☆</div>
+    <div class="rating-value">⭐ 4.4 / 5</div>
+    <button class="add-cart"
+          onclick="addToCart(
+            'Sling Bagp',
+            467,'⭐ 4.4 / 5',
+            'images1/slingbag 7.jpg'
+          )">Add to Cart</button>
+          <button onclick="buyNow('Sling Bagp',
+            467,'⭐ 4.4 / 5',
+            'images1/slingbag 7.jpg')">
+        Buy Now
+      </button>
+  </div>
+</div>
+<!-- ================= FLOATING CHAT ================= -->
+<div id="chatButton">💬 Chat</div>
+
+<div id="chatPopup">
+    <div class="chat-header">
+         <a href="home.html"><img src="logo.jpeg" alt="Nature Craft Store Logo"></a> Nature Craft Store 
+        <button id="closeChat">✖</button>
+    </div>
+
+    <div class="chat-box" id="chatBox"></div>
+
+    <div class="chat-buttons" id="chatButtons"></div>
+
+    <div class="chat-input">
+        <input type="text" id="userMessage" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <div class="contact-links">
+        <p>📞 <a href="tel:+919876543210">Call: +91 98765 43210</a></p>
+        <p>📧 <a href="mailto:support@naturecraft.com">Email: support@naturecraft.com</a></p>
+        <button onclick="clearChat()" class="clear-chat-btn">Clear Chat</button>
+    </div>
+</div>
+
+<script src="product-detail.js"></script>
+<script src="contact.js" defer></script>
+</body>
+</html>

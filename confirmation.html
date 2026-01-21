@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Order Confirmed</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="confirmation.css">
+<link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <a href="home.html" class="logo">
+    <img src="logo.jpeg" alt="Nature Craft Store Logo">
+    <span>Nature Craft Store</span>
+  </a>
+</header>
+
+<div class="confirm-container">
+  <div class="confirm-card">
+    <div class="checkmark">✔</div>
+
+    <h2>Thank You for Your Order!</h2>
+    <p>Your payment was successful.</p>
+
+    <div class="order-info">
+      <p><strong>Order ID:</strong> <span id="orderId"></span></p>
+      <p><strong>Name:</strong> <span id="custName"></span></p>
+      <p><strong>Mobile:</strong> <span id="custMobile"></span></p>
+      <p><strong>Delivery Address:</strong></p>
+      <p id="custAddress"></p>
+    </div>
+
+    <div class="actions">
+      <a href="home.html" class="btn">Continue Shopping</a>
+      <a href="order.html" class="btn outline">View Orders</a>
+    </div>
+  </div>
+</div>
+
+<div id="chatButton">💬 Chat</div>
+
+<!-- Chat Popup -->
+<div id="chatPopup">
+    <div class="chat-header">
+        <a href="home.html"><img src="logo.jpeg" alt="Nature Craft Store Logo"></a> Nature Craft Store 
+        <button id="closeChat">✖</button>
+    </div>
+
+    <div class="chat-box" id="chatBox"></div>
+
+    <div class="chat-buttons" id="chatButtons"></div>
+
+    <div class="chat-input">
+        <input type="text" id="userMessage" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <div class="contact-links">
+        <p>📞 <a href="tel:+919876543210">Call: +91 98765 43210</a></p>
+        <p>📧 <a href="mailto:support@naturecraft.com">Email: support@naturecraft.com</a></p>
+        <button onclick="clearChat()" class="clear-chat-btn">Clear Chat</button>
+    </div>
+</div>
+
+<script src="contant.js" defer></script>
+<script src="confirmation.js"></script>
+
+</body>
+</html>

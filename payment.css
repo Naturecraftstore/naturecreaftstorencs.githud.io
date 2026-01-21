@@ -1,0 +1,141 @@
+/* ======= GENERAL ======= */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+header.header {
+    background: #1e88e5;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header.header img {
+    width: 40px;
+    height: 40px;
+}
+
+header.header .logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* ======= CONTAINER ======= */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* ======= SUMMARY ======= */
+.summary {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.summary h2 {
+    margin-top: 0;
+}
+
+.summary-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.summary-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.summary-item div p {
+    margin: 3px 0;
+}
+
+/* ======= ADDRESS ======= */
+.address {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.address input, .address textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* ======= PAYMENT ======= */
+.payment {
+    grid-column: span 2;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.payment h2 {
+    margin-top: 0;
+}
+
+.payment label {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card-box {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-box input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.payment button {
+    padding: 12px;
+    width: 150px;
+    border: none;
+    background: #1e88e5;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.payment button:hover {
+    background: #1565c0;
+}
+
+.payment p.secure {
+    margin-top: 10px;
+    color: #4caf50;
+    font-weight: bold;
+}

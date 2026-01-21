@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+  padding: 15px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+}
+
+.back {
+  text-decoration: none;
+  color: #1e88e5;
+}
+
+.orders-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.order-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.order-card h3 {
+  margin-bottom: 5px;
+}
+
+.status {
+  color: green;
+  font-weight: bold;
+}
+
+.status.cancelled {
+  color: red;
+}
+
+.order-item {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.order-item img {
+  width: 70px;
+  border-radius: 5px;
+}
+
+.order-actions {
+  margin-top: 15px;
+}
+
+.order-actions button {
+  padding: 8px 12px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #e53935;
+  color: #fff;
+}
+
+.track-btn {
+  background: #1e88e5;
+  color: #fff;
+}
+
+.total {
+  margin-top: 10px;
+  font-weight: bold;
+}

@@ -1,0 +1,186 @@
+/* ================= GLOBAL ================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 90px;
+}
+
+/* ================= FORM CONTAINER ================= */
+.form-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    padding: 30px 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= HEADINGS ================= */
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* ================= INPUTS & SELECT ================= */
+input,
+select {
+    width: 100%;
+    padding: 12px 14px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 2px rgba(102,126,234,0.2);
+}
+
+/* ================= CHECKBOX ================= */
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin: 12px 0;
+    font-size: 14px;
+}
+
+.checkbox input {
+    width: auto;
+    margin-right: 8px;
+}
+
+/* ================= BUTTON ================= */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    background: #667eea;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #5a67d8;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* ================= LINKS ================= */
+p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ================= CAPTCHA ================= */
+.captcha-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f1f3f6;
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin: 10px 0;
+}
+
+#captchaText {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #333;
+    user-select: none;
+}
+
+.captcha-box button {
+    width: auto;
+    padding: 6px 10px;
+    font-size: 14px;
+    background: #28a745;
+    border-radius: 5px;
+}
+
+.captcha-box button:hover {
+    background: #218838;
+}
+/* ===== HEADER ===== */
+.main-header {
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 12px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.logo img {
+    height: 45px;
+    margin-right: 12px;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 25px 20px;
+        margin: 10px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}

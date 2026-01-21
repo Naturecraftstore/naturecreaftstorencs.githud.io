@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Cart | Nature Craft Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="cart.css">
+<link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="home.html">
+        <img src="logo.jpeg" alt="Nature Craft Store Logo">
+      </a>
+      Nature Craft Store
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="Home.html">Home</a></li>
+            <li><a href="product1.html">Handmade Craft</a></li>
+            <li><a href="product.html">Organic Beauty</a></li>
+            <li><a href="fashion.html">Fashion</a></li>
+            <li><a href="cart.html" class="cart-icon">🛒 Cart<span id="cart-count">0</span></a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="about.html">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ================= CART ================= -->
+<main class="cart-container">
+  <h2>🛒 My Cart</h2>
+
+  <div id="cartItems"></div>
+
+  <div class="cart-summary">
+    <h3>Total: ₹<span id="totalPrice">0</span></h3>
+
+    <button class="checkout-btn" onclick="goToPayment()">
+      Proceed to Payment
+    </button>
+  </div>
+</main>
+
+<footer>
+  <p>© 2025 Nature Craft Store</p>
+</footer>
+
+
+<!-- chatButton -->
+<div id="chatButton">💬 Chat</div>
+
+<div id="chatPopup">
+    <div class="chat-header">
+         <a href="home.html"><img src="logo.jpeg" alt="Nature Craft Store Logo"></a> Nature Craft Store 
+        <button id="closeChat">✖</button>
+    </div>
+
+    <div class="chat-box" id="chatBox"></div>
+
+    <div class="chat-buttons" id="chatButtons"></div>
+
+    <div class="chat-input">
+        <input type="text" id="userMessage" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <div class="contact-links">
+        <p>📞 <a href="tel:+919876543210">Call: +91 98765 43210</a></p>
+        <p>📧 <a href="mailto:support@naturecraft.com">Email: support@naturecraft.com</a></p>
+        <button onclick="clearChat()" class="clear-chat-btn">Clear Chat</button>
+    </div>
+</div>
+<!-- JS -->
+ <script src="contact.js" defer></script>
+<script src="cart.js"></script>
+
+</body>
+</html>

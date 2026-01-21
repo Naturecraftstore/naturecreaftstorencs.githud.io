@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+   <link rel="stylesheet" href="login.css">
+</head>
+<body>
+<header><div class="logo">
+            <a href="home.html"><img src="logo.jpeg" alt="Nature Craft Store Logo"></a>
+            Nature Craft Store
+        </div></header>
+<div class="form-container">
+  <h2>Login</h2>
+  <form id="loginForm">
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="password" placeholder="Password" required>
+
+    <p id="captchaText"></p>
+    <input type="text" id="captchaInput" placeholder="Enter captcha" required>
+
+    <button type="submit">Login</button>
+     <p>Don't have an account? <a href="singup.html">Register</a></p>     
+     <p><a href="forgot-password.html">Forgot Password?</a></p>
+  </form>
+</div>
+
+<script>
+let captcha = "";
+
+/* ===== GENERATE CAPTCHA ===== */
+function generateCaptcha() {
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    captcha = "";
+    for (let i = 0; i < 6; i++) {
+        captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    document.getElementById("captchaText").innerText = captcha;
+}
+
+generateCaptcha(); // show captcha on load
+
+/* ===== LOGIN JS ===== */
+document.getElementById("loginForm")?.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+    const captchaInput = document.getElementById("captchaInput").value.trim();
+
+    if(captchaInput !== captcha){
+        alert("Invalid captcha!");
+        generateCaptcha();
+        return;
+    }
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    const user = users.find(u => u.email === email && u.password === password);
+
+    if(!user){
+        alert("Invalid email or password!");
+        generateCaptcha();
+        return;
+    }
+
+    // Save login session
+    localStorage.setItem("currentUser", email);
+    localStorage.setItem("isLoggedIn", "true");
+
+    alert("Login successful 🎉 Welcome " + user.username);
+    window.location.href = "home.html"; // redirect to home page
+});
+
+/* ===== LOGOUT FUNCTION ===== */
+function logout(){
+    localStorage.removeItem("currentUser");
+    localStorage.removeItem("isLoggedIn");
+    alert("Logged out successfully");
+    window.location.href = "login.html";
+}
+
+/* ===== PROTECT PAGE FUNCTION ===== */
+function requireLogin(){
+    const loggedIn = localStorage.getItem("isLoggedIn");
+    const user = localStorage.getItem("currentUser");
+    if(!loggedIn || !user){
+        window.location.href = "login.html";
+    }
+}
+</script>
+</body>
+</html>

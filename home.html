@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nature Craft Store</title>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="contact.css"> <!-- Chat CSS -->
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+    <nav class="navbar">
+
+        <div class="logo">
+            <a href="home.html"><img src="logo.jpeg" alt="Nature Craft Store Logo"></a>
+            Nature Craft Store
+        </div>
+
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+        <div class="search-container">
+            <input type="text" id="product-search" placeholder="Search for products...">
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="product1.html">Handmade Craft</a></li>
+            <li><a href="product.html">Organic Beauty</a></li>
+            <li><a href="fashion.html">Fashion</a></li>
+            <li><a href="cart.html" class="cart-icon">🛒 Cart<span id="cart-count">0</span></a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="about.html">Logout</a></li>
+        </ul>
+
+    </nav>
+</header>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="hero-slider">
+    <div class="slides">
+        <img src="images/ncss1.jpeg" class="slide">
+        <img src="images/ncsb1.avif" class="slide">
+        <img src="images/images(3).jpg" class="slide">
+        <img src="images/ts5.jpeg" class="slide">
+    </div>
+
+    <div class="hero-content">
+        <h1>Welcome to Nature Craft Store</h1>
+        <p>Handmade • Organic • Authentic • Fashion</p>
+        <a href="product.html" class="btn">Shop Now</a>
+    </div>
+</section>
+
+<!-- ================= PRODUCT CAROUSEL ================= -->
+<section class="product-carousel-section">
+    <h2>Trending Products</h2>
+    <div class="product-carousel">
+        <div class="carousel-track">
+            <div class="item"><a href="product.html"><img src="images/AS1.png"></a><p>Aloe Vrer Soap</p></div>
+            <div class="item"><a href="product1.html"><img src="images/n8.jpg"></a><p>Handmade HandBag</p></div>
+            <div class="item"><a href="fashion.html"><img src="images/ts5.jpeg"></a><p>T Shirts</p></div>
+            <div class="item"><a href="product1.html"><img src="images/sre1.jpg"></a><p>Sarees</p></div>
+            <div class="item"><a href="product.html"><img src="images/mm1.jpeg"></a><p>Multani Face Pack</p></div>
+            <div class="item"><a href="product1.html"><img src="images/sre3.jpg"></a><p>Handmade Saree</p></div>
+            <div class="item"><a href="product.html"><img src="images/NS1.png"></a><p>Neem Shampoo</p></div>
+            <div class="item"><a href="fashion.html"><img src="images/ts4.jpeg"></a><p>Fashion Tshirts</p></div>
+            <div class="item"><a href="product.html"><img src="images/ncsb1.avif"></a><p>Beauty Pack</p></div>
+            <div class="item"><a href="fashion.html"><img src="images/ts3.jpeg"><p>Black T-Shirts</p></a></div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= PRODUCT GRID ================= -->
+<section class="products">
+    <h2>Our Popular Categories</h2>
+    <div class="product-grid">
+        <div class="product-box"><a href="product1.html"><img src="images/ncss1.jpeg"><h3>Handmade Craft</h3></a></div>
+        <div class="product-box"><a href="product.html"><img src="images/ncsb1.avif"><h3>Organic Beauty</h3></a></div>
+        <div class="product-box"><a href="fashion.html"><img src="images/ts2.jpeg"><h3>Fashion Items</h3></a></div>
+    </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+        <img src="images/sre2.jpg">
+        <img src="images/RS1.jpeg">
+        <img src="images/ts3.jpeg">
+        <img src="images/images(4).jpg">
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<div class="footer">
+    <div class="row">
+        <div class="footer-col-1">
+            <h3>Download Our App</h3>
+            <p>Available on Android & iOS</p>
+            <div class="app-logo">
+                <img src="images/play-store.jpeg">
+                <img src="images/app1-store.jpeg">
+            </div>
+        </div>
+        <div class="footer-col-2">
+            <img src="logo.jpeg">
+            <p>Bringing natural wellness closer to you.</p>
+        </div>
+        <div class="footer-col-3">
+            <h3>Useful Links</h3>
+            <ul>
+                <li>Coupons</li>
+                <li>Blog</li>
+                <li>Return Policy</li>
+                <li>Affiliate Program</li>
+            </ul>
+        </div>
+        <div class="footer-col-4">
+            <h3>Follow Us</h3>
+            <ul>
+                <li>Facebook</li>
+                <li>Instagram</li>
+                <li>YouTube</li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <p class="copyright">© 2025 Nature Craft Store. All Rights Reserved.</p>
+</div>
+
+<!-- ================= FLOATING CHAT ================= -->
+<div id="chatButton">💬 Chat</div>
+
+<div id="chatPopup">
+    <div class="chat-header">
+         <a href="home.html"><img src="logo.jpeg" alt="Nature Craft Store Logo"></a> Nature Craft Store 
+        <button id="closeChat">✖</button>
+    </div>
+
+    <div class="chat-box" id="chatBox"></div>
+
+    <div class="chat-buttons" id="chatButtons"></div>
+
+    <div class="chat-input">
+        <input type="text" id="userMessage" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <div class="contact-links">
+        <p>📞 <a href="tel:+919876543210">Call: +91 98765 43210</a></p>
+        <p>📧 <a href="mailto:support@naturecraft.com">Email: support@naturecraft.com</a></p>
+        <button onclick="clearChat()" class="clear-chat-btn">Clear Chat</button>
+    </div>
+</div>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="home.js"></script>
+<script src="contact.js" defer></script>
+
+</body>
+</html>
