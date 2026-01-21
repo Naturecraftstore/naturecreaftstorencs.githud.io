@@ -4,13 +4,16 @@ function toggleMenu() {
 }
 
 // ================= IMAGE CHANGE =================
-function changeImage(productId, thumb) {
-  const mainImage = document.getElementById(productId);
-  mainImage.src = thumb.src;
+function changeImage(productId, element) {
+  const mainImg = document.getElementById("main-" + productId);
+  if (mainImg && element?.src) {
+    mainImg.src = element.src;
+  }
 
-  const thumbs = thumb.parentElement.querySelectorAll(".thumb");
-  thumbs.forEach(t => t.classList.remove("active"));
-  thumb.classList.add("active");
+  element.parentElement.querySelectorAll(".thumb").forEach(t =>
+    t.classList.remove("active")
+  );
+  element.classList.add("active");
 }
 
 // ================= CART LOGIC =================
@@ -55,3 +58,4 @@ function updateCartCount() {
 }
 
 updateCartCount();
+
